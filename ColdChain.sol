@@ -78,7 +78,7 @@ contract ColdChain{
         else if(encodesMode == encodedMode2){
             return Mode.VERIFIER;
         }
-        revert("received invalid entity mode")
+        revert("received invalid entity mode");
 
     }
     /////////////////////////////////////////////////////////////////
@@ -88,7 +88,7 @@ contract ColdChain{
         uint id = vaccineBatchIds.length;
         VaccineBatch memory batch = VaccineBatch(id, brand, manufacturer, _certificateIds);
         vaccineBatches[id] = batch;
-        vaccineBatchIds.push(id)
+        vaccineBatchIds.push(id);
         emit AddVaccineBatch(batch.id, batch.manufacturer);
         return id;
     }
@@ -113,7 +113,7 @@ contract ColdChain{
         bytes32 encodedStatus4 =  keccak256(abi.encodePacked("DELIVERED"));
        
         
-        revert("received invalid entity mode")
+        revert("received invalid entity mode");
 
     }
 
